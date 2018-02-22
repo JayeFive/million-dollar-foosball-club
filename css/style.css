@@ -2,22 +2,20 @@ body {
   margin: 0;
 }
 
-
+/* Front Page */
 .navbar {
+  background-color: #fff;
   margin: 0;
   top: 0;
   width: 100%;
   height: 50px;
   border-style: solid;
   position: fixed;
-}
-
+  z-index: 9999; }
 .navbar > h1 {
   margin-top: 0;
   padding-top: 4px;
-  text-align: center;
-}
-
+  text-align: center; }
 .splash-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -27,40 +25,57 @@ body {
   width: 100%;
   height: 580px;
   /*background-image: url("../images/placeholder-background.png");*/
-  border-style: solid;}
+  border-style: solid; }
 .main-article {
   margin-top: 10px;
   grid-column: 1 / 3;
   height: 560px;
-  border-style: solid;}
+  border-style: solid; }
 .slide-viewer {
   position: relative;
   overflow: hidden;
   margin: 70px auto 0 auto;
   width: 540px;
   height: 420px;
-  border-style: solid;}
+  border-style: solid; }
 .slide-group {
   width: 100%;
   height: 100%;
-  position: relative;}
+  position: relative; }
 .slide {
   width: 100%;
   height: 100%;
   display: none;
-  position: absolute;}
+  position: absolute; }
 .slide:first-child {
-  display: block;}
-  
+  display: block; }
+.slide-buttons {
+  width: 100%;
+  margin: 8px auto; 
+  text-align: center;
+}
+.slide-buttons button {
+  background-color: rgba(100, 100, 100, 0.2);
+  height: 20px;
+  width:  20px;
+  margin: 0 2px;
+  border-style: none;
+  border-radius: 20px;
+  outline: none; }
+.slide-buttons button.active, .slide-buttons button:hover {
+  background-color: rgba(100, 100, 100, 0.5); }
 .right-bar {
   margin-top: 10px;
   grid-column: 3;
   height: 560px;
-  border-style: solid;
-}
-
+  border-style: solid; }
 .right-bar p {
   overflow: hidden;
   padding: 20px 0 0 20px;
-  font-size: 24px;
-}
+  font-size: 24px; }
+  
+  /* Menu Page */
+.menu-page {
+  width: 100%;
+  height: 540px;
+  border-style: solid; }

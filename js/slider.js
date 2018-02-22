@@ -1,4 +1,4 @@
-$('slider').each(function() {
+$('.slider').each(function() {
   var $this = $(this),
       $group = $this.find('.slide-group'),
       $slides = $this.find('.slide'),
@@ -36,7 +36,7 @@ $('slider').each(function() {
   }
   
   function advance() {
-    clearTimeout(timeout);    
+    clearTimeout(timeout);
     timeout = setTimeout(function() {
       if(currentIndex < ($slides.length - 1)) {   // tertiary here
         move(currentIndex + 1);              
@@ -47,14 +47,14 @@ $('slider').each(function() {
   }
   
   $.each($slides, function(index) {
-    var $button = $('<button type="button" class="slide-btn">&bull;</button>');
+    var $button = $('<button type="button" class="slide-btn"></button>');
     if (index === currentIndex) {
       $button.addClass('active');
     }
     $button.on('click', function () {
       move(index);
     }).appendTo($this.find('.slide-buttons'));
-    buttonArray.push($button)
+    buttonArray.push($button);
   });
   
   advance();
