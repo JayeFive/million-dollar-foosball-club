@@ -23,19 +23,37 @@ body {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
-  margin-top: 62px;
+  margin-top: 50px;
   width: 100%;
-  height: 960px;
-  background-image: url("../images/placeholder-background.png");
-}
-
+  height: 580px;
+  /*background-image: url("../images/placeholder-background.png");*/
+  border-style: solid;}
 .main-article {
+  margin-top: 10px;
   grid-column: 1 / 3;
   height: 560px;
-  border-style: solid;
-}
-
+  border-style: solid;}
+.slide-viewer {
+  position: relative;
+  overflow: hidden;
+  margin: 70px auto 0 auto;
+  width: 540px;
+  height: 420px;
+  border-style: solid;}
+.slide-group {
+  width: 100%;
+  height: 100%;
+  position: relative;}
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;}
+.slide:first-child {
+  display: block;}
+  
 .right-bar {
+  margin-top: 10px;
   grid-column: 3;
   height: 560px;
   border-style: solid;
