@@ -10,7 +10,7 @@ $('.slider').each(function() {
   function move(newIndex) {
     var animateLeft, slideLeft;
     
-    advance();
+    advanceSlide();
     
     if ($group.is(':animated') || currentIndex === newIndex) {
       return;
@@ -36,7 +36,7 @@ $('.slider').each(function() {
     });
   }
   
-  function advance() {
+  function advanceSlide() {
     clearTimeout(timeout);
     timeout = setTimeout(function() {
       currentIndex < ($slides.length -1) ? move(currentIndex + 1) : move(0);
@@ -54,6 +54,6 @@ $('.slider').each(function() {
     buttonArray.push($button);
   });
   
-  advance();
+  advanceSlide();
    
 });
