@@ -4,6 +4,7 @@ $('.slider').each(function() {
       $slides = $this.find('.slide'),
       buttonArray = [],
       currentIndex = 0,
+      timePerSlide = 4000,
       timeout;
 
   function move(newIndex) {
@@ -38,12 +39,8 @@ $('.slider').each(function() {
   function advance() {
     clearTimeout(timeout);
     timeout = setTimeout(function() {
-      if(currentIndex < ($slides.length - 1)) {   // tertiary here
-        move(currentIndex + 1);              
-      } else {
-        move(0);
-      }
-    }, 4000);
+      currentIndex < ($slides.length -1) ? move(currentIndex + 1) : move(0);
+    }, timePerSlide);
   }
   
   $.each($slides, function(index) {
