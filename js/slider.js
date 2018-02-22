@@ -42,9 +42,11 @@ $('.slider').each(function() {
   
   function advanceSlide() {
     clearTimeout(timeout);
-    timeout = setTimeout(function() {
-      currentIndex < ($slides.length -1) ? move(currentIndex + 1) : move(0);
-    }, timePerSlide);
+    timeout = window.setTimeout(determineNextSlide, timePerSlide);
+  }
+  
+  function determineNextSlide () {
+    currentIndex < ($slides.length -1) ? move(currentIndex + 1) : move(0);
   }
   
   $.each($slides, function(index) {
