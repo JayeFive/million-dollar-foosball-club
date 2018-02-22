@@ -6,7 +6,12 @@ $('.slider').each(function() {
       currentIndex = 0,
       timePerSlide = 4000,
       timeout;
-
+  
+  function updateButtonState(newIndex) {
+    buttonArray[currentIndex].removeClass('active');
+    buttonArray[newIndex].addClass('active');
+  }
+  
   function move(newIndex) {
     var animateLeft, slideLeft;
     
@@ -16,8 +21,7 @@ $('.slider').each(function() {
       return;
     }
     
-    buttonArray[currentIndex].removeClass('active');
-    buttonArray[newIndex].addClass('active');
+    updateButtonState(newIndex);
     
     if (newIndex > currentIndex) {
       slideLeft = '100%';
