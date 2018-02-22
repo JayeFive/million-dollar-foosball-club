@@ -1,3 +1,5 @@
+var $ = jQuery();   // temporary to remove warnings
+
 $('.slider').each(function() {
   var $this = $(this),
       $group = $this.find('.slide-group'),
@@ -49,17 +51,29 @@ $('.slider').each(function() {
     currentIndex < ($slides.length -1) ? move(currentIndex + 1) : move(0);
   }
   
-  $.each($slides, function(index) {
-    var $button = $('<button type="button" class="slide-btn"></button>');
-    if (index === currentIndex) {
-      $button.addClass('active');
-    }
-    $button.on('click', function () {
-      move(index);
-    }).appendTo($this.find('.slide-buttons'));
-    buttonArray.push($button);
-  });
+  function createButtonHTML () {
+    return $('<button type="button" class="slide-btn"></button>');
+  }
   
+  function addButtonHTML ($button) {
+    $button.appendTo($this.find('.slide-buttons'));
+  }
+  
+  function addButtonEventListener ($button, index) {
+    $button.on('click', function () { move(index) });
+  }
+  
+  function createButtons () {
+    $.each($slides, function(index) {
+      var $button = createButtonHTML();
+      if (index === currentIndex) $button.addClass('active');
+      addButtonHTML($button);
+      addButtonEventListener($button, index);
+      buttonArray.push($button);
+    });
+  }
+  
+  createButtons();
   advanceSlide();
    
 });
