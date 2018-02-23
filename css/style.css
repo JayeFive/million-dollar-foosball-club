@@ -3,19 +3,68 @@ body {
 }
 
 /* Front Page */
+.info-bar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(58px, auto);
+  width: 100%;
+  height: 58px;
+  color: #555;
+  font-family: sans-serif;
+  background-color: #f3f3f9;
+}
+
+.address {
+  position: relative;
+  grid-column: 1;
+  top: 20px;
+  left: 20px;
+  text-shadow: 0 0 3px 2px #222;
+}
+
+.info-bar a:visited {
+  color: #555;
+}
+
+.fa-map-marker-alt {
+  margin-right: 12px;
+}
+
+.business-hours {
+  position: relative;
+  grid-column: 2;
+  top: 20px;
+}
+
+.social-media {
+  position: relative;
+  grid-column: 3;
+  top: 13px;
+}
+
+
 .navbar {
   background-color: #fff;
-  margin: 0;
+  margin-bottom: 10px;
   top: 0;
   width: 100%;
-  height: 50px;
-  border-style: solid;
-  position: fixed;
+  height: 116px;
+  position: relative;
   z-index: 9999; }
 .navbar > h1 {
   margin-top: 0;
   padding-top: 4px;
   text-align: center; }
+
+.top-slider-wrapper {
+  width: 100%;
+  height: 412px;
+  /*background-image: url("../images/front-image.jpg");*/
+  background-color: #f9f9f3;
+}
+
+  
 #splash-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -25,21 +74,29 @@ body {
   width: 100%;
   height: 580px;
   /*background-image: url("../images/placeholder-background.png");*/
-  border-style: solid; 
-  background-image: url("../images/table-sepia-1080x720.jpg"); }
+  border-style: solid;
+  background-size: cover;
+}
+  
 .main-article {
   position: relative;
   margin-top: 10px;
   grid-column: 1 / 3;
   height: 560px;
-  border-style: solid; }
+  z-index: 0;
+  /*border-style: solid;*/
+  }
 .slide-viewer {
   position: relative;
   overflow: hidden;
   margin: 70px auto 0 auto;
-  width: 540px;
-  height: 420px;
-  border-style: solid; }
+  width: 960px;
+  height: 412px;
+  /*box-shadow: 0 0 1px 1px #bbb;*/
+  border-radius: 2px; 
+  /*border-style: solid;*/
+  /*border-color: #888*/
+}
 .slide-group {
   width: 100%;
   height: 100%;
@@ -56,15 +113,15 @@ body {
   margin: 8px auto; 
   text-align: center; }
 .slide-buttons button {
-  background-color: rgba(100, 100, 100, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
   height:        15px;
   width:         15px;
   border-radius: 15px;
-  margin: 0 2px;
+  margin: 0 4px;
   border-style: none;
   outline: none; }
 .slide-buttons .active, .slide-buttons button:hover {
-  background-color: rgba(100, 100, 100, 0.5); }
+  background-color: rgba(0, 0, 0, 0.9); }
 .unsplash-credit {
   position: absolute;
   margin: 0 5px 5px 0;
@@ -78,17 +135,22 @@ body {
   grid-column: 3;
   height: 560px;
   overflow: hidden;
-  border-style: solid; }
+  /*border-style: solid;*/
+}
 .logo-container {
   /*margin: 10px;*/
   height: 280px;
   text-align: center;
-  border-style: solid; }
+  /*border-style: solid; */
+  
+}
 .right-bar section {
   /*margin: 0 10px;*/
   padding-left: 20px;
   font-size: 20px;
-  border-style: solid; }
+  text-shadow: 0px 0px 20px #fff;
+  /*border-style: solid; */
+}
 
   
   /* Menu Page */
