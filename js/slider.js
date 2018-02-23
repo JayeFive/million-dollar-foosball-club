@@ -1,4 +1,4 @@
-var $ = jQuery();   // temporary to remove warnings
+// var $ = jQuery();   // temporary to remove warnings
 
 $('.slider').each(function() {
   var $this = $(this),
@@ -60,7 +60,9 @@ $('.slider').each(function() {
   }
   
   function addButtonEventListener ($button, index) {
-    $button.on('click', function () { move(index) });
+    $button.on('click', function () {
+      move(index);
+    });
   }
   
   function createButtons () {
