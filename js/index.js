@@ -2,8 +2,9 @@
 
 var shrinkHeader = (function() {
 
-	const shrinkPosition = 83, timeout = 25;
+	const shrinkPosition = 83, timeout = 50;
 	var   $docElem = $(document.documentElement),
+		    $header = $('.header-container'),
 		    $navbar = $('.navbar'),
 		    $logo = $('.logo-wrapper'),
 		    $navLinks = $('.nav-links ul'),
@@ -36,12 +37,14 @@ var shrinkHeader = (function() {
 	  $navbar.addClass('navbar-shrink');
 	  $logo.addClass('logo-wrapper-shrink');
 	  $navLinks.css( { 'line-height': '90px'} );
+	  $header.css( { 'height': '90px' } );
 	}
 	
 	function expandNavbar () {
 	  $navbar.removeClass('navbar-shrink');
 	  $logo.removeClass('logo-wrapper-shrink');
     $navLinks.css( { 'line-height': '116px'} );
+	  $header.css( { 'height': '0px' } );
 	}
 
 	init();
