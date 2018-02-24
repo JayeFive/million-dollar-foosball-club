@@ -2,6 +2,11 @@ body {
   margin: 0;
 }
 
+.header-container {
+  position: relative;
+  height: 0;
+}
+
 /* Info Bar */
 .info-bar {
   display: grid;
@@ -11,7 +16,7 @@ body {
   width: 100%;
   height: 58px;
   color: #555;
-  font-family: sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   background-color: #f3f3f9;
 }
 .address {
@@ -37,14 +42,26 @@ body {
   position: relative;
   grid-column: 3;
   top: 13px;
-  right: 90px;
+  right: 30px;
   text-align: right;
+}
+.social-media ul {
+  list-style-type: none;
+  margin: auto;
+}
+.social-media li {
+  display: inline;
+  margin: 0 15px;
 }
 .fa-clock {
   margin-right: 12px;
 }
 /* Navbar */
+.header-container {
+  position: relative;
+}
 .navbar {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
@@ -53,19 +70,78 @@ body {
   top: 0;
   width: 100%;
   height: 116px;
+  z-index: 999;
+}
+.navbar-shrink {
+  position: fixed;
+  height: 90px;
+}
+.nav-logo {
   position: relative;
 }
-.nav-logo-wrapper {
-  position: relative;
+.logo-wrapper {
+  position: absolute;
   grid-column: 1;
-  left: 150px;
+  width: 90px;
+  height: 90px;
+  float: right;
+  right: 80px;
+  top: 50%;
+  margin-top: -45px;
+  }
+.nav-links {
+  grid-column: 2 / 4;
+}
+.nav-links ul {
+  list-style-type: none;
+  line-height: 116px;
+  margin: 0;
+}
+.nav-links li {
+  display: inline;
+}
+.nav-links a {
+  margin: 0 50px;
+  color: #29293a;
+  font-family: 'Oswald', sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar a:visited {
+  color: #29293a;
+}
+.navbar a:hover{
+  color: #e24040;
 }
 
+.navbar a:focus {
+  color: #e24040;
+}
+/* Heading Text Animations */
+.heading-text-animations {
+  position: absolute;
+  width: 520px;
+  height: 200px;
+  margin-left: -260px;
+  left: 50%;
+  margin-top: 30px;
+  z-index: 10;
+}
+
+.heading-container {
+  color: #fff;
+  font-family: 'Roboto Condensed';
+  font-size: 70px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 0 0 10px #000;
+}
+
+/* Photo Fader */
 .top-slider-wrapper {
   width: 100%;
   height: 412px;
-  /*background-image: url("../images/front-image.jpg");*/
-  background-color: #f3f3f9;
 }
 .slide-viewer {
   position: relative;
@@ -87,7 +163,8 @@ body {
 .slide:first-child {
   display: block; 
 }
-  
+
+/* Second Page */ 
 #splash-page {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -9,6 +9,7 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed|Ubuntu" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -23,32 +24,58 @@
           Hours: Fri-Sat 6-10pm
         </div>
         <div class="social-media">
-          <a href="https://www.facebook.com/PortlandFoosball/">
-            <i class="fab fa-facebook fa-2x"></i>
-          </a>
+          <ul>
+            <li>
+              <a href="https://www.meetup.com/The-Million-Dollar-Foosball-Club/">
+                <i class="fab fa-meetup fa-2x"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.facebook.com/PortlandFoosball/">
+                <i class="fab fa-facebook fa-2x"></i>
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
     
     <!-- Navigation -->
+    <header class="header-container"></header>
     <header>
-      <nav class="navbar">
-        <div class="nav-logo-wrapper">
-          <img src="../images/logo-116x116.png">
+      <div class="navbar">
+        <div class="nav-logo">
+          <div class="logo-wrapper">
+            <a href="#"><img src="../images/logo-90x90.png" alt="million dollar foosball club logo"></a>
+          </div>
         </div>
-      </nav>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#events">EVENTS</a></li>
+            <li><a href="#menu">MENU</a></li>
+            <li><a href="#feed">FEED</a></li>
+          </ul>
+        </div>
+      </div>
     </header>
-    
     <!-- Main Content -->
+    <!-- Heading Text Animations -->
+    <div class="heading-text-animations">
+      <div class="heading-container">
+        The Million Dollar Foosball Club
+      </div>
+    </div>
+    
     <!-- Top Picture Slider -->
     <div class="top-slider-wrapper">
       <div class="slider">
         <div class="slide-viewer">
           <div class="slide-group">
-            <div class="slide slide-1"><img src="../images/top-slider/top-slider1.jpg"></div>
-            <div class="slide slide-2"><img src="../images/top-slider/top-slider2.jpg"></div>
-            <div class="slide slide-3"><img src="../images/top-slider/top-slider3.jpg"></div>
-            <div class="slide slide-4"><img src="../images/top-slider/top-slider4.jpg"></div>
+            <div class="slide slide-1"><img src="../images/top-slider/top-slider1.jpg" alt="photo from the club"></div>
+            <div class="slide slide-2"><img src="../images/top-slider/top-slider2.jpg" alt="photo from the club"></div>
+            <div class="slide slide-3"><img src="../images/top-slider/top-slider3.jpg" alt="photo from the club"></div>
+            <div class="slide slide-4"><img src="../images/top-slider/top-slider4.jpg" alt="photo from the club"></div>
           </div>
         </div>
       </div>
@@ -61,7 +88,7 @@
         
       </div>
       <aside class="right-bar">
-        <div class="logo-container"><img src="../images/logo-negative-280x280.png"></div>
+        <!--<div class="logo-container"><img src="../images/logo-negative-280x280.png"></div>-->
         <section class="business-description">
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet sapien nulla. Donec suscipit enim ut nisl vestibulum accumsan. Duis iaculis ex ut dolor rhoncus porta. Pellentesque at velit lectus. In ultrices mollis nunc vitae sodales. Praesent nec congue turpis. Nam molestie rutrum ipsum, in pulvinar lorem finibus a. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Quisque in nulla gravida, imperdiet ex sed, condimentum turpis.</p>
         </section>
@@ -89,7 +116,7 @@
     </section>
   
   
-
+    <script src="../js/index.js"></script>
     <script src="../js/slider.js"></script>
   </body>
 </html>
