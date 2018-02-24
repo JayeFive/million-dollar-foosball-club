@@ -10,9 +10,6 @@ var shrinkHeader = (function() {
 		  headerIsShrunk = false,
 		  isChecking = false,
       yPosition;
-  
-  console.log('navabar: ' + $navbar);
-  console.log($navLinks);
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -29,7 +26,6 @@ var shrinkHeader = (function() {
 	
 	function checkPosition() {
 	  checkForChange(getYPosition());
-	 
 	}
 	
 	function checkForChange(position) {
