@@ -37,7 +37,7 @@ var shrinkHeader = (function() {
 	  $navbar.addClass('navbar-shrink');
 	  $logo.addClass('logo-wrapper-shrink');
 	  $navLinks.css( { 'line-height': '90px'} );
-	  $header.css( { 'height': '90px' } );
+	  $header.css( { 'height': '116px' } );
 	}
 	
 	function expandNavbar () {
