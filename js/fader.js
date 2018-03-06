@@ -1,8 +1,7 @@
 $(document).ready(function() {
     
-  const timeout = 4000, timePerFade = 1500;
-  var $this = $(this),
-      $photos = $('.fader-photo'),
+  const timeout = 6000, timePerFade = 1500;
+  var $photos = $('.fader-photo'),
       currentPhoto = 0;
   
   function init() {
