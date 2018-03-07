@@ -11,6 +11,7 @@ $(document).ready(function() {
   }
   
   function fadeOut() {
+    clearTimeout(timeout);
     window.setTimeout(function() {
       $photos.eq(currentPhoto).fadeOut(timePerFade, fadeIn());
     }, timeout);
