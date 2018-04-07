@@ -50,3 +50,16 @@ var shrinkHeader = (function() {
 	init();
 
 })();
+
+
+var galleryPhotoLoader = (function() {
+  
+  var $galleryPhotos = $('.gallery-photo'),
+      photoHolder = $('<div class="photo-holder"></div>')
+  
+  $galleryPhotos.forEach(function() {
+    
+    
+  });
+  
+});
