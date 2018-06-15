@@ -18,7 +18,7 @@ html, body {
   height: 58px;
   color: #555;
   font-family: 'Ubuntu', sans-serif;
-  background-color: #f3f3f9;
+  background-color: #f3f3f0;
   box-shadow: inset 0 10px 10px -6px #c2c6cb;
 }
 .info-bar a:visited {
@@ -238,4 +238,29 @@ span.hours {
   position: absolute;
   left: 50%;
   margin-left: -720px;
+}
+
+
+
+
+/* Events and Announcements */
+.title {
+  font-size: 5em;
+  text-align: center;
+}
+.events-container {
+  background: #f3f3f0;
+  width: 100%;
+  height: 720px;
+}
+.events-wrapper {
+  position: relative;
+  top: 7px;
+}
+.event-box {
+  position: relative;
+  background: #fff;
+  width: 78%;
+  height: 160px;
+  left: 7em;
 }
