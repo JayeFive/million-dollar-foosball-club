@@ -230,12 +230,10 @@ span.hours {
 .fader {
   position: relative;
   overflow: hidden;
-  height: 412px;
   border-radius: 2px;
 }
-
 .fader-photo {
-  position: absolute;
+  position: fixed;
   left: 50%;
   margin-left: -720px;
 }
@@ -244,14 +242,16 @@ span.hours {
 
 
 /* Events and Announcements */
-.title {
-  font-size: 5em;
-  text-align: center;
-}
 .events-container {
+  position: relative;
+  top: 20em;
   background: #f3f3f0;
   width: 100%;
   height: 720px;
+}
+.title {
+  font-size: 5em;
+  text-align: center;
 }
 .events-wrapper {
   position: relative;
