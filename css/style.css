@@ -201,10 +201,12 @@ span.hours {
 }
 
 
-/* Heading Text Animations */
+
+
+/* Heading Text */
 .heading-text-animations {
   position: absolute;
-  width: 520px;
+  /*width: 520px;*/
   height: 200px;
   margin-left: -260px;
   left: 50%;
@@ -221,3 +223,19 @@ span.hours {
   text-shadow: 0 0 10px #000;
 }
 
+
+
+
+ /*Photo Fader */
+.fader {
+  position: relative;
+  overflow: hidden;
+  height: 412px;
+  border-radius: 2px;
+}
+
+.fader-photo {
+  position: absolute;
+  left: 50%;
+  margin-left: -720px;
+}
