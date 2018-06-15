@@ -4,10 +4,8 @@ var shrinkHeader = (function() {
 
 	const shrinkPosition = 83, timeout = 50;
 	var   $docElem = $(document.documentElement),
-		    $header = $('.header-container'),
+		    $header = $('.sticky-header'),
 		    $navbar = $('.navbar'),
-		    $logo = $('.logo-wrapper'),
-		    $navLinks = $('.nav-links ul'),
 		    isChecking = false;
 
 	function init() {
@@ -34,32 +32,15 @@ var shrinkHeader = (function() {
 	}
 	
 	function shrinkNavbar () {
+	  var navbarWidth = $header.width();
 	  $navbar.addClass('navbar-shrink');
-	  $logo.addClass('logo-wrapper-shrink');
-	  $navLinks.css( { 'line-height': '90px'} );
-	  $header.css( { 'height': '116px' } );
+	  $navbar.width(navbarWidth);
 	}
 	
 	function expandNavbar () {
 	  $navbar.removeClass('navbar-shrink');
-	  $logo.removeClass('logo-wrapper-shrink');
-    $navLinks.css( { 'line-height': '116px'} );
-	  $header.css( { 'height': '0px' } );
 	}
 
 	init();
 
 })();
-
-
-var galleryPhotoLoader = (function() {
-  
-  var $galleryPhotos = $('.gallery-photo'),
-      photoHolder = $('<div class="photo-holder"></div>')
-  
-  $galleryPhotos.forEach(function() {
-    
-    
-  });
-  
-});
