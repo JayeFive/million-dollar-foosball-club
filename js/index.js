@@ -2,11 +2,13 @@
 
 var shrinkHeader = (function() {
 
-	const shrinkPosition = 83, timeout = 50;
-	var   $docElem = $(document.documentElement),
-		    $header = $('.sticky-header'),
-		    $navbar = $('.navbar'),
-		    isChecking = false;
+	const shrinkPosition   = 83, timeout = 50;
+	var   $docElem         = $(document.documentElement),
+	      $infoBar         = $('.info-bar'),
+		    $navbar          = $('.navbar'),
+		    $photoFader      = $('.fader'),
+		    $eventsContainer = $('.events-container'),
+		    isChecking       = false;
 
 	function init() {
 		window.addEventListener( 'scroll', function( event ) {
@@ -32,13 +34,17 @@ var shrinkHeader = (function() {
 	}
 	
 	function shrinkNavbar () {
-	  var navbarWidth = $header.width();
+	 // var navbarWidth = $infoBar.width();
 	  $navbar.addClass('navbar-shrink');
-	  $navbar.width(navbarWidth);
+	 // $navbar.width(navbarWidth);
+	  $photoFader.css( { 'top':'116px' } );
+	  $eventsContainer.css( { 'top':'528px' } );
 	}
 	
 	function expandNavbar () {
 	  $navbar.removeClass('navbar-shrink');
+	  $photoFader.css( { 'top':'0px' } );
+	  $eventsContainer.css( { 'top':'412px' } );
 	}
 
 	init();
