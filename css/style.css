@@ -111,7 +111,7 @@ html, body {
 
 
 /* Navbar */
-.navbar {
+.title-bar {
   position: fixed;
   top: 58px;
   height: 96px;
@@ -120,34 +120,34 @@ html, body {
   z-index: 999;
   background-color: #fff;
 }
-.navbar a:visited {
+.title-bar a:visited {
   color: #29293a;
 }
-.navbar a:hover,
-.navbar a:focus {
+.title-bar a:hover,
+.title-bar a:focus {
   color: #e24040;
 }
-.navbar .logo {
+.title-bar .logo {
   position: relative;
   max-width: 90em;
   float: left;
   left: 4%;
   padding-top: 2px;
 }
-.navbar .title {
+.title-bar .title {
   font-size: 2em;
   text-align: center;
   position: relative;
 }
-.navbar span {
+.title-bar span {
   display: block;
 }
 @media screen and (min-width: 43em) {
-  .navbar span {
+  .title-bar span {
     display: inline;
     line-height: 96px;
   }
-  .navbar .title {
+  .title-bar .title {
     font-size: 3em;
   }
 }
